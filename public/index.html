@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="ui">
+      <div id="playerCount">Players: 0/2</div>
+      <button id="startButton" disabled>Start Game</button>
+      <div id="countdown" class="countdown"></div>
+    </div>
+
+    <div class="wallet-display">
+      <span id="walletDisplay">RS: 0</span>
+      <span id="walletEmoji" class="emoji">💰</span>
+    </div>
+
+    <div class="timer-display" id="timerDisplay">Time: 0</div>
+
+    <div id="gameOverModal" class="modal">
+      <div class="modal-content">
+        <h2>Game Over</h2>
+        <div id="gameResult" class="game-result"></div>
+        <button id="playAgainButton">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
