@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D Multiplayer Shooter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <div id="ui-overlay">
+      <div id="timer">60</div>
+      <div id="wallet-display">🪙 ₹0</div>
+      <div id="kills-display">Kills: 0 (₹0)</div>
+    </div>
+    <div id="game-over">
+      <h2>Game Over!</h2>
+      <div id="result-message"></div>
+      <div id="earnings-display">Total Earnings: ₹0</div>
+      <button id="play-again">Play Again</button>
+    </div>
+    <div id="waiting-screen">
+      <h2>Waiting for opponent...</h2>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

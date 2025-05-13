@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+}
+
+#game-canvas {
+  background-color: #333;
+  border: 4px solid #444;
+}
+
+#ui-overlay {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+#timer {
+  font-size: 20px;
+}
+
+#wallet-display, #kills-display {
+  font-size: 16px;
+}
+
+#game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#game-over h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#result-message {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#earnings-display {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: gold;
+}
+
+#play-again {
+  padding: 15px 30px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#play-again:hover {
+  background-color: #45a049;
+}
+
+#waiting-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  #game-container {
+    width: 100vw;
+    height: 75vw;
+  }
+  
+  #timer, #wallet-display, #kills-display {
+    font-size: 12px;
+  }
+  
+  #game-over h2 {
+    font-size: 24px;
+  }
+  
+  #result-message, #earnings-display {
+    font-size: 16px;
+  }
+  
+  #play-again {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
